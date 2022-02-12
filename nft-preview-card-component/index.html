@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | NFT preview card component</title>
+  
+  <style>
+    @font-face {
+      font-family: "Outfit";
+      font-weight: 300;
+      src: url(https://fonts.gstatic.com/s/outfit/v4/QGYyz_MVcBeNP4NjuGObqx1XmO1I4W61O4a0Ew.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: "Outfit";
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/outfit/v4/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1O4a0Ew.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: "Outfit";
+      font-weight: 600;
+      src: url(https://fonts.gstatic.com/s/outfit/v4/QGYyz_MVcBeNP4NjuGObqx1XmO1I4e6yO4a0Ew.woff2) format('woff2');
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 18px;
+      font-family: "Outfit", sans-serif;
+    }
+    
+    body {
+      background-color: hsl(217, 54%, 11%);
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+    }
+    main {
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 1rem;
+      margin: 0 auto;
+      width: 350px;
+      padding: 1.5rem;
+    }
+    #nft {
+      overflow: hidden;
+      border-radius: 0.66rem;
+      position: relative;
+    }
+    #nft::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+    #nft:hover::after {
+      background: url(images/icon-view.svg) center center no-repeat,
+                hsla(178, 100%, 50%, 0.4);
+    }
+
+    #nft img {
+      width: 100%;
+      display: block;
+    }
+    .price {
+      color: hsl(178, 100%, 50%);
+    }
+    h1, .author {
+      color: white;
+    }
+    h1:hover, .author:hover {
+      color: hsl(178, 100%, 50%);
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    h1, p {
+      padding: 1rem 0 0;
+      margin: 0;
+    }
+    #pricetime {
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid hsl(215, 32%, 27%);
+    }
+    .price {
+      font-weight: 600;
+    }
+    #pricetime {
+      clear: both;
+    }
+    #price {
+      float: left;
+    }
+    #time {
+      float: right;
+    }
+    #pricetime img {
+      margin-right: 0.25em;
+      vertical-align: text-bottom;
+    }
+    img.avatar {
+      border-radius: 50%;
+      border: 1px solid white;
+      vertical-align: middle;
+      width: 2rem;
+      margin-right: 0.75rem;
+    }
+    .footer {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section id="nft">
+      <img src="images/image-equilibrium.jpg" alt="coin image" title="equilibrium image"/>
+    </section>
+    <h1>
+      Equilibrium #3429
+    </h1>
+    <p>
+      Our Equilibrium collection promotes balance and calm.
+    </p>
+    <div id="pricetime">
+      <div class="price"><img src="images/icon-ethereum.svg"/> 0.041 ETH</div>
+      <div class="time"><img src="images/icon-clock.svg"/> 3 days left</div>
+    </div>
+    <p class="footer">
+      <img class="avatar" src="images/image-avatar.png"/>
+      Creation of <span class="author">Jules Wyvern</span>
+    </p>
+  </main>
+
+  
+</body>
+</html>
