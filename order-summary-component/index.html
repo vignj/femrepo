@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    @font-face {
+      font-family: Red Hat Display;
+      font-weight: 500;
+      src: url(https://fonts.gstatic.com/s/redhatdisplay/v11/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbl6WQk8z-A.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: Red Hat Display;
+      font-weight: 700;
+      src: url(https://fonts.gstatic.com/s/redhatdisplay/v11/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbouRQk8z-A.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: Red Hat Display;
+      font-weight: 900;
+      src: url(https://fonts.gstatic.com/s/redhatdisplay/v11/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbsWRQk8z-A.woff2) format('woff2');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+    }
+    body {
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 500;
+      background: url(images/pattern-background-desktop.svg) top center repeat-x;
+      background-color:hsl(225, 100%, 94%);
+      color: hsl(224, 23%, 55%); 
+    }
+    
+    /* main styles */
+
+    main {
+      border-radius: 1rem;
+      margin: 0 auto;
+      box-shadow: 0 1em 1em hsla(245, 75%, 52%, 0.1);
+      overflow: hidden;
+      width: 450px;
+      background-color: white;
+    }
+
+    /* content styles */
+    
+    #hero img {
+      display: block;
+      width: 100%;
+    }
+
+    main > *:not(:first-child) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+    main p, main h1 {
+      text-align: center;
+    }
+    main h1 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-top: 1.5em;
+      color: hsl(223, 47%, 23%);
+    }
+    main .tagline {
+      line-height: 1.5;
+    }
+
+    /* planchange styles */
+
+    #planchange {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+    #planprice {
+      background: url(images/icon-music.svg) left center/contain no-repeat;
+      clear: both;
+    }
+    .plan, .price {
+      margin-left: 50px; 
+      float: right;
+    }
+    .plan {
+      font-weight: 900;
+      color: hsl(223, 47%, 23%);
+    }
+
+    /* button styles */
+    
+    .button {
+      background-color: hsl(245, 75%, 52%);
+      box-shadow: 0 0.5em 1em hsl(245, 75%, 52%, 0.5);
+      border-radius: 0.5em;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .button:hover {
+      opacity: 0.75;
+    }
+    
+    /* change styles */
+
+    #change a {
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+    }
+    #change a:hover {
+      opacity: 0.75;
+      text-decoration: none;
+    }
+
+    /* cancel styles */
+
+    .cancel {
+      margin-bottom: 2.5rem;
+      font-weight: 900;
+    }
+    .cancel a {
+      text-decoration: none;
+      color: hsl(224, 23%, 55%);
+    }
+    .cancel a:hover {
+      color: hsl(223, 47%, 23%);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <main>
+    <div id="hero">
+      <img src="images/illustration-hero.svg"/>
+    </div>
+    <h1>
+      Order Summary
+    </h1>
+    <p class="tagline">
+      You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!
+    </p>
+    <div id="planchange">
+      <div id="planprice">
+        <span class="plan">Annual Plan</span>
+        <br/>
+        <span class="price">$59.99/year</span> 
+      </div>
+      <div id="change">
+        <a href="#">Change</a>
+      </div>
+    </div>
+    <div class="button">
+      Proceed to Payment
+    </div>
+    <p class="cancel">
+      <a href="#">Cancel Order</a>
+    </p>
+  </main>
+
+</body>
+</html>
