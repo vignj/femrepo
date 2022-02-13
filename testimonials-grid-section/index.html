@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <style>
+    @font-face {
+      font-family: "Barlow";
+      font-weight: 500;
+      src: url(https://fonts.gstatic.com/s/barlowsemicondensed/v13/wlpigxjLBV1hqnzfr-F8sEYMB0Yybp0mudRfi6m_B2sl.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: "Barlow";
+      font-weight: 600;
+      src: url(https://fonts.gstatic.com/s/barlowsemicondensed/v13/wlpigxjLBV1hqnzfr-F8sEYMB0Yybp0mudRfp66_B2sl.woff2) format('woff2');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 13px;
+      font-family: Barlow, sans-serif;
+      font-weight: 500;
+    }
+    body {
+      background-color: hsl(0, 0%, 81%);
+    }
+
+    /* container styles */
+
+    #container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+    #container > div {
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+    #container > div p {
+      line-height: 1.5;
+      opacity: 0.7;
+    }
+
+    /* block styles */
+
+    #block1, #block2, #block4 {
+      color: white;
+    }
+    #block3, #block5 {
+      color: gray;
+    }          
+    #block1 {   
+      background: url(images/bg-pattern-quotation.svg) 80% 0/auto no-repeat;
+      background-color: hsl(263, 55%, 52%);
+      grid-column: 1/span 2;
+    }
+    #block2 { 
+      background-color: hsl(217, 19%, 35%); 
+      grid-column: 3;
+    }
+    #block3 { 
+      background-color: hsl(0, 0%, 100%); 
+      grid-column: 1;
+    }
+    #block4 { 
+      background-color: hsl(219, 29%, 14%); 
+      grid-column: 2/span 2;
+    }
+    #block5 { 
+      background-color: hsl(0, 0%, 100%); 
+      grid-column: 4;
+      grid-row: 1/span 2;
+    }
+
+    /* header styles */
+    
+    header img {
+      vertical-align: middle;
+      margin-right: 1rem;
+      border-radius: 50%;
+      border: 2px solid hsla(0, 0%, 100%, 0.5);
+      width: 2.5rem;
+    }
+    .tag {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1rem;
+    }
+    .tag h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    .tag span {
+      opacity: 0.5;
+    }
+    
+    @media screen and (max-width: 500px) {
+      #container {
+        grid-template-columns: 1fr;
+      }
+      #container > div {
+        grid-column: 1;
+        grid-row: auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+
+    <div id="block1">
+      <header>
+        <img src="images/image-daniel.jpg"/>
+        <div class="tag">
+          <h2>Daniel Clifford</h2>
+          <span>Verified Graduate</span>
+        </div>
+      </header>
+      <h2>
+        I received a job offer mid-course, and the subjects I learned were current, if not more so, 
+        in the company I joined. I honestly feel I got every penny’s worth.
+      </h2>
+      <p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
+        transition and have heard some people who had an amazing experience here. I signed up 
+        for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+        The next 12 weeks was the best - and most grueling - time of my life. Since completing 
+        the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+      </p>
+    </div>
+
+    <div id="block2">
+      <header>
+        <img src="images/image-jonathan.jpg"/>
+        <div class="tag">
+          <h2>Jonathan Walters</h2>
+          <span>Verified Graduate</span>
+        </div>
+      </header>
+      <h2>  
+        The team was very supportive and kept me motivated
+      </h2>
+      <p>
+        “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
+        for a big company. This was one of the best investments I’ve made in myself. ”
+      </p>
+    </div>
+
+    <div id="block3">
+      <header>
+        <img src="images/image-jeanette.jpg"/>
+        <div class="tag">
+          <h2>Jeanette Harmon</h2>
+          <span>Verified Graduate</span>
+        </div>
+      </header>
+      <h2>
+        An overall wonderful and rewarding experience
+      </h2>
+      <p>
+        “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+        while doing something I love. ”
+      </p>
+    </div>
+
+    <div id="block4">
+      <header>
+        <img src="images/image-patrick.jpg">
+        <div class="tag">
+          <h2>Patrick Abrams</h2>
+          <span>Verified Graduate</span>
+        </div>
+      </header>
+      <h2>
+        Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
+        learning from their experiences was easy.
+      </h2>
+      <p>
+        “ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
+        gave me the confidence necessary to be able to go out in the world and present myself as a capable 
+        junior developer. The standard is above the rest. You will get the personal attention you need from 
+        an incredible community of smart and amazing people. ”
+      </p>
+    </div>
+
+    <div id="block5">
+      <header>
+        <img src="images/image-kira.jpg">
+        <div class="tag">
+          <h2>Kira Whittle</h2>
+          <span> Verified Graduate</span>
+        </div>
+      </header>
+      <h2>
+        Such a life-changing experience. Highly recommended!
+      </h2>
+      <p>
+        “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
+        professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
+        student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
+        did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
+        project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
+        could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
+        experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
+        100% recommend! ”
+      </p>
+    </div>
+</body>
+</html>
