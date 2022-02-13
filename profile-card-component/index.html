@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <title>Frontend Mentor | Profile card component</title>
+  <style>
+    @font-face {
+      font-family: 'Kumbh Sans';
+      src: url(https://fonts.gstatic.com/s/kumbhsans/v10/c4mw1n92AsfhuCq6tVsaoIx1CHIi4kToNorqShNPVo0.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Kumbh Sans';
+      font-weight: 700;
+      src: url(https://fonts.gstatic.com/s/kumbhsans/v10/c4mw1n92AsfhuCq6tVsaoIx1CHIi4kToNooNTRNPVo0.woff2) format('woff2');
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 18px;
+    }
+    body {
+      height: 100vh;
+      background: url('images/bg-pattern-top.svg') top calc(-978px / 2) left calc(-978px / 4) no-repeat,
+                  url('images/bg-pattern-bottom.svg') bottom calc(-978px * 2 / 3) right calc(-978px / 4) no-repeat,
+                  hsl(185, 75%, 39%);
+      color: hsl(0, 0%, 59%);
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    #wrapper {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    #container {
+      width: 350px;
+      height: 375px;
+      border-radius: 1rem;
+      display: flex;
+      flex-flow: column nowrap;
+      background: url('images/bg-pattern-card.svg') top center repeat-x,
+                  white;
+      text-align: center;
+    }
+
+    /* photo styles */
+
+    #photo {
+      margin-top: calc(140px - (100px/2));
+    }
+    #photo img {
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    /* tag styles */
+
+    #tag {
+      padding: 1rem 0;
+      line-height: 1.5;
+      border-bottom: 1px solid hsl(227, 10%, 46%, 0.2);
+    }
+    .name {
+      font-weight: bold;
+      color: hsl(229, 23%, 23%);
+      padding: 0.2rem;
+    }
+    .city {
+      font-size: 0.8rem;;
+    }
+
+    /* social styles */
+
+    #social {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    #social > div {
+      padding: 1.5rem;
+    }
+    #social h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: hsl(229, 23%, 23%);
+    }
+    #social p {
+      margin: 0;
+      font-size: 0.6rem;
+      letter-spacing: 0.1rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      body {
+        background: url('images/bg-pattern-top.svg') top calc(-978px * 2/ 3) left calc(-978px * 3 / 5) no-repeat,
+                    url('images/bg-pattern-bottom.svg') bottom calc(-978px * 2/ 3) right calc(-978px * 2/ 3) no-repeat,
+                  hsl(185, 75%, 39%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="container">
+      <div id="photo">
+        <img src="images/image-victor.jpg"/>
+      </div>
+      <div id="tag">
+        <span class="name">Victor Crest</span>
+        <span class="age">26</span><br/>
+        <span class="city">London</span>      
+      </div>
+      <div id="social">
+        <div id="follow">
+          <h3>80K</h3>
+          <p>Followers</p>
+        </div>
+        <div id="likes">
+          <h3>803K</h3>
+          <p>Likes</p>
+        </div>
+        <div id="photos">
+          <h3>1.4K</h3>
+          <p>Photos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
