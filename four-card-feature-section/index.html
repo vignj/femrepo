@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      font-weight: 200;
+      src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Poppins';
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Poppins';
+      font-weight: 600;
+      src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 15px;
+    }
+    body {
+      width: 80%;
+      margin: 0 auto;
+      font-family: Poppins, sans-serif;
+      color: hsl(229, 6%, 66%);
+    }
+
+    /* header styles */
+
+    header {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      font-size: 1em; /* reset */
+    }
+    header > h1 {
+      margin: 2rem 0 0;
+      font-weight: 200;
+    }
+    header > h2 {
+      margin: 0;
+      font-weight: 600;
+      color: hsl(234, 12%, 34%);
+    }
+    header > p {
+      font-size: 1rem;
+      width: 60ch;
+      margin: 1rem auto;
+    }
+
+    /* main styles */
+
+    main {
+      column-count: 3;
+      column-gap: 2rem;
+      padding: 3rem;
+    }
+
+    /* card styles */
+
+   .card {
+      display: flex;
+      flex-flow: column;
+      border-top: 5px solid;
+      border-radius: 0.3rem;
+      padding: 1rem;
+      box-shadow: 0 1rem 5px hsla(0, 0%, 0%, 0.2);
+      min-height: 18rem;
+      margin-bottom: 2rem;
+    }
+
+    #super { 
+      border-color: hsl(180, 62%, 55%); 
+      margin: 10rem 0; 
+    }
+    #team { 
+      border-color: hsl(0, 78%, 62%); 
+    }
+    #karma { 
+      border-color: hsl(34, 97%, 64%);
+    }
+    #calc { 
+      border-color: hsl(212, 86%, 64%); 
+      margin: 10rem 0; 
+    }
+
+    /* HACK: strut div needed to push #calc down */
+
+    .strut {
+      height: 0.1px;
+    }
+    
+    /* card content styles */
+
+    .card h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: hsl(234, 12%, 34%);
+    }
+    .card p {
+      font-weight: 200;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .card > p:nth-of-type(2) {
+      text-align: right;
+      margin-top: auto;
+    }
+
+    @media screen and (max-width: 375px) {
+
+      body {
+        width: 100%;
+        padding: 0.5rem;
+      }
+
+      header {
+        width: 100%;
+        font-size: 1.75rem;
+        padding: 1rem;
+      }
+      header > p {
+        width: 100%;
+        margin: 1rem auto;
+      }
+
+      main {
+        column-count: 1;
+        padding: 1rem;
+      }
+
+      #super, #team, #karma, #calc  {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+      .strut {
+        display: none;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>
+      Reliable, efficient delivery
+    </h1>
+    <h2>
+      Powered by Technology
+    </h2>
+    <p>
+      Our Artificial Intelligence powered tools use millions of project data points 
+      to ensure that your project is successful
+    </p>
+  </header>
+
+  <main>
+
+    <div id="super" class="card">   
+      <h1>
+        Supervisor
+      </h1>
+      <p>
+        Monitors activity to identify project roadblocks
+      </p>
+      <p>
+        <img src="images/icon-supervisor.svg"/>
+      </p>
+    </div>
+
+    <div id="team" class="card">
+      <h1>
+        Team Builder
+      </h1>
+      <p>
+        Scans our talent network to create the optimal team for your project
+      </p>
+      <p>
+        <img src="images/icon-team-builder.svg"/>
+      </p>
+    </div>
+
+    <div id="karma" class="card">
+      <h1>
+        Karma
+      </h1>
+      <p>
+        Regularly evaluates our talent to ensure quality
+      </p>
+      <p>
+        <img src="images/icon-karma.svg"/>
+      </p>
+    </div>
+
+    <div class="strut"></div>
+    <div id="calc" class="card">
+      <h1>
+        Calculator
+      </h1>
+      <p>
+        Uses data from past projects to provide better delivery estimates
+      </p>
+      <p>
+        <img src="images/icon-calculator.svg"/>
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>
