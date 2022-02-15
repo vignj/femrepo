@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <style>
+    @font-face {
+      font-family: Poppins;
+      src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: Poppins;
+      font-weight: 600;
+      src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+    }
+
+    @font-face {
+      font-family: "Open Sans";
+      src: url(https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2) format('woff2');
+  
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+    }
+    body {
+      font-family: Open Sans;
+      background-image: url(images/bg-desktop.svg);
+      background-color: hsl(257, 40%, 49%);
+      color: hsl(300, 69%, 71%);
+    }
+
+    /* container styles */
+
+    #container {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      grid-template-rows: 10rem 1fr 4rem;
+      height: 100vh;
+      margin: 4rem;
+    }
+    
+    /* header styles */
+
+    header {
+      background: url(images/logo.svg) left 0% no-repeat;
+      grid-column: 1/span 2;
+    }
+
+    /* illus styles */
+
+    #illus img {
+      max-width: 100%;
+    }
+    
+    /* intro styles */
+
+    #intro {
+      padding: 2rem;
+      color: hsla(0, 0%, 100%, 0.75);
+    }
+    
+    #intro h1 {
+      color: white;
+      font-size: 3rem;
+      font-family: Poppins, sans-serif;
+      margin: 0;
+    }
+
+    .button {
+      background-color: white;
+      border-radius: 1.5rem;
+      line-height: 3rem;
+      display: inline-block;
+      padding: 0 4rem;
+      border: none;
+      margin: 1rem 0;
+      color: hsl(257, 40%, 49%);
+    }
+
+    /* footer styles */
+
+    footer {
+      text-align: right;
+      grid-column: 1 / span 2;
+    }
+    
+    footer img {
+      width: 2rem;
+      margin: 0 1rem;
+      vertical-align: middle;
+    }
+
+    @media screen and (max-width: 375px) {
+
+      #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 6rem 2fr 3fr 4rem;
+        width: 95%;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      header, #intro, #illus, footer {
+        grid-column: 1/2;
+        text-align: center;
+        padding: 0;
+      }
+
+      header {
+        background-size: 50% 50%;
+      }
+      
+      #intro h1 {
+        font-size: 1.35rem;
+      }
+
+      footer {
+        text-align: center;
+      }
+
+      footer img {
+        width: 2rem;
+        margin: 0 0.5rem;
+        vertical-align: middle;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header></header>
+    <div id="illus">
+      <img src="images/illustration-mockups.svg"/>
+    </div>
+    <div id="intro">
+      <h1>
+        Build The Community Your Fans Will Love
+      </h1>
+      <p>
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+        Create connections with your users as you engage in genuine discussion. 
+      </p>
+      <div class="button">
+        Register
+      </div>
+    </div>
+    <footer>
+      <img src="images/facebook-brands.svg"/>
+      <img src="images/amazon-brands.svg" />
+      <img src="images/delicious-brands.svg" />
+    </footer>
+</body>
+</html>
