@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <style>
+    @font-face {
+      font-family: Karla;
+      src: url(https://fonts.gstatic.com/s/karla/v21/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: Karla;
+      font-weight: 700;
+      src: url(https://fonts.gstatic.com/s/karla/v21/qkBIXvYC6trAT55ZBi1ueQVIjQTDH52aE0lK.woff2) format('woff2');
+    }
+
+    *, ::before, ::after {
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 14px;
+    }
+    body {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      background-color: #e6eff6;
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      color: hsl(204, 43%, 93%);
+      width: 75%;
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.2);
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    /* banner styles */
+
+    #banner {
+      grid-column: 1/span 2;
+      padding: 2rem;
+    }
+
+    #banner h1 {
+      color: hsl(179, 62%, 43%);
+    }
+
+    #banner h2 {
+      color: hsl(71, 73%, 54%);
+    }
+
+    #banner p {
+      margin: 0;
+      line-height: 2rem;
+      color: hsl(218, 22%, 67%);
+    }
+    
+    /* subscription styles */
+
+    #subscription {
+      background-color: hsl(179, 62%, 43%);
+      padding: 3rem;
+      color: white;
+    }
+
+    #priceline {
+      margin-top: 2rem;
+    }
+
+    .price {
+      font-size: 2rem;
+      vertical-align: middle;
+    }
+    
+    .period {
+      color: hsl(204, 43%, 93%);
+      vertical-align: middle;
+      margin-left: 1rem;
+    }
+
+    .button {
+      border-radius: 0.5rem;
+      box-shadow: 0px 5px 5px hsla(0, 0%, 30%, 0.5);
+      text-align: center;
+      height: 4rem;
+      line-height: 4rem;
+      margin: 3rem 0;
+      background-color: hsl(71, 73%, 54%);
+    }
+
+    /* whyus styles */
+
+    #whyus {
+      padding: 3rem;
+      background-color: #4abebd;
+    }
+
+    #whyus ul {
+      margin: 2rem 0;
+      list-style: none;
+      padding: 0;
+    }
+
+    #whyus ul li {
+      margin: 0.5rem 0;
+    }
+
+    @media screen and (max-width: 375px) {
+
+      #container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      #banner, #subscription, #whyus {
+        grid-column: 1/2;
+        padding: 2rem;
+      }
+
+      .button {
+        margin-bottom: 0;
+      }
+
+      #whyus ul {
+        margin-bottom: 0;
+      }
+    }
+  
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    
+    <div id="banner">
+      <h1>
+        Join our community
+      </h1>
+      <h2>
+        30-day, hassle-free money back guarantee
+      </h2>
+      <p>
+        Gain access to our full library of tutorials along with expert code reviews. 
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </div>
+    
+    <div id="subscription">
+      <h2>
+        Monthly Subscription
+      </h2>
+      <p id="priceline">
+        <span class="price">&dollar;29</span><span class="period">per month</span>
+      </p>
+      <p>
+        Full access for less than &dollar;1 a day
+      </p>
+      <div class="button">
+        Sign Up
+      </div>
+    </div>
+    
+    <div id="whyus">
+      <h2> 
+        Why Us
+      </h2>
+      <ul>
+        <li>Tutorials by industry experts</li>
+        <li>Peer &amp; expert code review</li>
+        <li>Coding exercises</li>
+        <li>Access to our GitHub repos</li>
+        <li>Community forum</li>
+        <li>Flashcard decks</li>
+        <li>New videos every week</li>
+      </ul>
+    </div>
+
+</body>
+</html>
